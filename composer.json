@@ -1,0 +1,27 @@
+{
+    "name": "lrm/yac",
+    "description": "Yac cache for Laravel Lumen",
+    "license": "MIT",
+    "homepage": "https://github.com/ruolinn",
+    "support": {
+        "issues": "",
+        "source": ""
+    },
+    "authors": [
+        {
+            "name": "Wangxiaoguang",
+            "email": "xiaoguang.wang@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/contracts": "5.4.*",
+        "illuminate/support": "5.4.*",
+        "illuminate/cache": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lrm\\Yac\\": ""
+        }
+    }
+}
