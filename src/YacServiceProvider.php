@@ -8,8 +8,10 @@ class YacServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app['cache']->extends('yac', function($app, $config) {
-            
+        $this->app->resolving('cache', function($cache) {
+            $cache->extend('yac', function($app, $config) {
+                return new YacStore($config['prefix']);
+            });
         });
     }
 }
