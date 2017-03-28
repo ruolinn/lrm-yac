@@ -10,7 +10,7 @@ class YacServiceProvider extends ServiceProvider
     {
         $this->app->resolving('cache', function($cache) {
             $cache->extend('yac', function($app, $config) {
-                return new YacStore($config['prefix']);
+                return $this->repository(new YacStore($config['prefix']));
             });
         });
     }
