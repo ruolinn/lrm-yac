@@ -1,0 +1,26 @@
+* Lumen Yac Cache
+
+** 使用
+   bootstrap/app.php 文件中增加下面代码
+   #+begin_src php
+   $app->register($app->register(Lrm\Yac\YacServiceProvider::class);
+   #+end_src
+
+   config/cache.php 文件中增加配置
+   #+begin_src php
+   return [
+       'stores' => [
+        'yac' => [
+            'driver' => 'yac',
+            'prefix' => 'yac_',
+        ],
+    ]
+   #+end_src
+
+
+   代码实例
+   #+begin_src php
+   $cahce = app('cache')->driver('yac');
+   $cache->set('key', 'value');
+   $result = $cache->get('key');
+   #+end_src
